@@ -49,6 +49,8 @@
 
   ```
 {"Cookie":"ywguid=123456789;ywkey=wedqwdlAWVJp9;platform=android;channel=mqqmina;mpVersion=0.30.0;qq_ver=8.4.18.4945;os_ver=Android10......}
+上面漏了个引号
+{"Cookie":"ywguid=123456789;ywkey=wedqwdlAWVJp9;platform=android;channel=mqqmina;mpVersion=0.30.0;qq_ver=8.4.18.4945;os_ver=Android10......"}
   ```
 
 多账号请按`Enter`键换行隔开示例(这里给下三个账号的示例)
@@ -58,6 +60,10 @@
 {"Cookie":"ywguid=123456789;ywkey=******}
 {"Cookie":"ywguid=123456789;ywkey=******}
   ```
+  上面漏了个引号
+{"Cookie":"ywguid=123456789;ywkey=******"}
+{"Cookie":"ywguid=123456789;ywkey=******"}
+{"Cookie":"ywguid=123456789;ywkey=******"}
   
 4. `QQREADTIMEURL` 参数格式为
 

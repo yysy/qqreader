@@ -1,4 +1,4 @@
-# QQRead使用说明
+# QQRead使用说明https://github.com/Water008/qqread
 
 > 基于python的自动化脚本  
 > 低调使用，请勿到处宣传  

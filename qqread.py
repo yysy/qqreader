@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 
 
 # 以下为可修改参数
-TIME = 30  # 单次上传阅读时间，默认为5分钟
+TIME = 10  # 单次上传阅读时间，默认为5分钟
 LIMIT_TIME = 20  # 每日最大上传阅读时间，默认为18小时
 DELAYSEC = 1  # 单次任务延时，默认为1秒
 NOTIFYTYPE = 3  # 0为关闭通知，1为所有通知，2为领取宝箱成功通知，3为每领15个宝箱通知一次

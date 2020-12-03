@@ -1,4 +1,4 @@
-name: 企鹅读书
+name: 企鹅读书-water008
 
 on:
   workflow_dispatch:

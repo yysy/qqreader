@@ -1,4 +1,4 @@
-# QQRead使用说明https://github.com/Water008/qqread
+# QQRead使用说明
 
 > 基于python的自动化脚本  
 > 低调使用，请勿到处宣传  
@@ -20,7 +20,7 @@
 
 - 任何以任何方式查看此项目的人或直接或间接使用该项目的任何脚本的使用者都应仔细阅读此声明。本人保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或Script项目的规则，则视为您已接受此免责声明。
 
- ** 您必须在下载后的24小时内从计算机或手机中完全删除以上内容 **  
+ **您必须在下载后的24小时内从计算机或手机中完全删除以上内容**  
 > ***您使用或者复制了本仓库且本人制作的任何脚本，则视为 `已接受` 此声明，请仔细阅读*** 
 
 
@@ -36,6 +36,8 @@
 | `NOTIFYCFG`          | 通知服务       | 非必须 | 详见通知服务                    | 
 | `SCKEY`              | server酱key   | 非必须 | 自行获取                        | 
 | `BARK`               | bark秘钥      | 非必须 | 自行获取                        | 
+| `TG_BOT_TOKEN`      | telegram推送  | 非必须 | tg推送,填写自己申请[@BotFather](https://t.me/BotFather)的Token,如`10xxx4:AAFcqxxxxgER5uw` , [具体教程](https://github.com/lxk0301/jd_scripts/blob/master/backUp/TG_PUSH.md) |
+| `TG_USER_ID`         | telegram推送  | 非必须 | tg推送,填写[@getuseridbot](https://t.me/getuseridbot)中获取到的纯数字ID, [具体教程](https://github.com/lxk0301/jd_scripts/blob/master/backUp/TG_PUSH.md) |
 
 
 **⚠️cookie获取方法：**
@@ -48,18 +50,16 @@
 
 
   ```
-{"Cookie":"ywguid=123456789;ywkey=wedqwdlAWVJp9;platform=android;channel=mqqmina;mpVersion=0.30.0;qq_ver=8.4.18.4945;os_ver=Android10......}
-
+{"Cookie":"ywguid=123456789;ywkey=wedqwdlAWVJp9;platform=android;channel=mqqmina;mpVersion=0.30.0;qq_ver=8.4.18.4945;os_ver=Android10","aaa":"bbb",......}
   ```
 
 多账号请按`Enter`键换行隔开示例(这里给下三个账号的示例)
 
   ```
-{"Cookie":"ywguid=123456789;ywkey=******}
-{"Cookie":"ywguid=123456789;ywkey=******}
-{"Cookie":"ywguid=123456789;ywkey=******}
+{"Cookie":"ywguid=123456789;ywkey=******","aaa":"bbb",......}
+{"Cookie":"ywguid=123456789;ywkey=******","aaa":"bbb",......}
+{"Cookie":"ywguid=123456789;ywkey=******","aaa":"bbb",......}
   ```
-
   
 4. `QQREADTIMEURL` 参数格式为
 
@@ -75,7 +75,7 @@ https://mqqapi.reader.qq.com/mqq/addReadTimeWithBid?scene=***&refer=-1&bid=***&r
 https://mqqapi.reader.qq.com/mqq/addReadTimeWithBid?scene=***&refer=-1&bid=***&readTime=***&read_type=0&conttype=1&read_status=0&chapter_info=%5B%7B%221%22%3A%7B%22readTime%22%3A***%2C%22pay_status%22%3A0%7D%7D%5D&sp=-1
   ```
   
-5. **特别注意：** 三个参数出现的顺序一定要一致
+5. **特别注意：** 三个参数中每个账号信息出现的顺序一定要一致，且每个参数有几个账号就写几行，不要有多余空行！
 
 ### 运行方式
 
@@ -102,11 +102,12 @@ GitHub action自动运行，账号信息读取自 `Repo-Setting-Secrets`
 支持两种通知方式，后续看心情添加其他通知方式
 
 ```
-  [0，1，2]  0:不通知     1:server酱      2:bark服务
+  [0，1，2，3]  0:不通知     1:server酱      2:bark服务      3:Telegram_bot
 ```
 
 1. 使用Server酱的需要参数 `SCKEY` ，支持GitHub action
 2. 使用bark的填写 `BARK` ，支持GitHub action
+3. 使用Telegram Bot的填写 `TG_BOT_TOKEN` `TG_USER_ID` ，支持GitHub action
 
 ### 通知类型
 
@@ -118,7 +119,15 @@ GitHub action自动运行，账号信息读取自 `Repo-Setting-Secrets`
   [0，1，2，3]  0：关闭通知   1：所有通知   2：领取宝箱成功通知   3：每领15个宝箱通知一次
 ```
 
+### 同步Fork后的代码
+
+手动同步，[具体教程](http://www.ibloger.net/article/3361.html)
+
 ### 特别感谢(排名不分先后)：
+
 * [@ziye12](https://github.com/ziye12)
 
 * [@Zero-S1](https://github.com/Zero-S1)
+
+* [@lxk0301](https://github.com/lxk0301)
+

@@ -31,6 +31,7 @@ jobs:
         if: env.QQREAD_HEADER
         run: |
           cd ~/qqreader
+          npm init -y
           npm install
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_HEADER

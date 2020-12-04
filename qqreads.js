@@ -85,7 +85,7 @@ let qqreadhdArr = [], qqreadheaderVal = '',
   if (process.env.COOKIES_SPLIT){
       COOKIES_SPLIT = process.env.COOKIES_SPLIT;
   };
-  console.log(`============ cookies分隔符为：${COOKIES_SPLIT} =============\n`);
+  console.log(`============ cookies分隔符为：${COOKIES_SPLIT} =============`);
   if (process.env.QQREAD_HEADER && process.env.QQREAD_HEADER.indexOf(COOKIES_SPLIT) > -1) {
   qqreadHD = process.env.QQREAD_HEADER.split(COOKIES_SPLIT);
   } else {

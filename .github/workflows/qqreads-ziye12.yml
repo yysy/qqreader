@@ -27,11 +27,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: npm init -y
-        if: env.QQREAD_HEADER
-        run: |
-          cd ~/qqreader
-          npm init -y
       - name: npm install
         if: env.QQREAD_HEADER
         run: |

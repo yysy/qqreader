@@ -36,7 +36,7 @@ jobs:
         if: env.QQREAD_HEADER
         run: |
           cd ~/qqreader
-          node qqreads.js
+          node qqread.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

@@ -1,8 +1,8 @@
 # qqreader 
 https://github.com/ziye12/JavaScript        https://github.com/Water008/qqread
 
-qq阅读
-https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a
+企鹅读书
+
 
 QQREADHEADERS QQREADTIMEHEADERS 两个参数格式为
 {"Cookie":"ywguid=123456789;ywkey=******;platform=ios;channel=mqqmina;mpVersion=0.30.0"}

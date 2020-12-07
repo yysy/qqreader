@@ -5,7 +5,8 @@ https://github.com/ziye12/JavaScript        https://github.com/Water008/qqread
 
 
 QQREADHEADERS QQREADTIMEHEADERS 两个参数格式为
-{"Cookie":"ywguid=123456789;ywkey=******;platform=ios;channel=mqqmina;mpVersion=0.30.0"}
+{"Cookie":"ywguid=*****;ywkey=******;platform=ios;channel=mqqmina;mpVersion=0.30.0"}
 
-{"Cookie":"ywguid=123456789;ywkey=******;platform=ios;channel=mqqmina;mpVersion=0.30.0;qq_ver=8.0.17;os_ver=iOS 13.0.9;mpos_ver=1.11.0;platform=ios;openid=*******"}
+{"Cookie":"ywguid=*****;ywkey=*****;platform=ios;channel=mqqmina;mpVersion=0.31.0;qq_ver=8.4.17;os_ver=iOS 12.4.9;mpos_ver=1.21.0;platform=ios;openid=*****","Content-Type":"application/json","User-Agent":"QQ/8.4.17.638 CFNetwork/978.0.7 Darwin/18.7.0","Connection":"keep-alive","Accept-Language":"zh-cn","mpversion":"0.31.0","Accept-Encoding":"br, gzip, deflate"}
+
 加引号，需要完整的cookie

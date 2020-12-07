@@ -3,6 +3,7 @@ import json
 import time
 import os
 import re
+import ast
 import notification
 
 
@@ -15,13 +16,13 @@ import notification
 
 # qqreadheaders参数填写，填写完注意不要上传
 # 如果有其它账号，还需要将qqreadheaders2填写进下面的qqreadheadersLists
-qqreadheaders1 = {}
-qqreadheaders2 = {}
+qqreadheaders1 = '{}'
+qqreadheaders2 = '{}'
 
-# qqreadheaders参数填写，填写完注意不要上传
+# qqreadbody参数填写，填写完注意不要上传
 # 如果有其它账号，还需要将qqreadtimeheaders2填写进下面的qqreadheadersLists
-qqreadtimeheaders1 = {}
-qqreadtimeheaders2 = {}
+qqreadbodys1 = '{}'
+qqreadbodys2 = '{}'
 
 # qqreadheaders参数填写，填写完注意不要上传
 # 如果有其它账号，还需要将qqreadheaders2填写进下面的qqreadheadersLists
@@ -29,29 +30,27 @@ qqreadtimeurl1 = ""
 qqreadtimeurl2 = ""
 
 # 如为多账号，请修改下面参数
-qqreadheadersLists = [qqreadheaders1, qqreadheaders2]
-qqreadtimeheadersLists = [qqreadtimeheaders1, qqreadtimeheaders2]
-qqreadtimeurlLists = [qqreadtimeurl1, qqreadtimeurl2]
+qqreadheadersLists = [qqreadheaders1, ]
+qqreadbodysLists = [qqreadbodys1, ]
+qqreadtimeurlLists = [qqreadtimeurl1, ]
 
 qqreadLists = list(
-    zip(qqreadheadersLists, qqreadtimeheadersLists, qqreadtimeurlLists))
+    zip(qqreadheadersLists, qqreadbodysLists, qqreadtimeurlLists))
 
 ####################################
 # 方案2 GitHub action 自动运行    各参数读取自secrets
 
 
-def github_secrets():
+if "QQREADHEADERS" and "QQREADBODYS" and "QQREADTIMEURL" in os.environ:
     qqreadheaders = os.environ["QQREADHEADERS"].split('\n')
-    qqreadtimeheaders = os.environ["QQREADTIMEHEADERS"].split('\n')
+    qqreadbodys = os.environ["QQREADBODYS"].split('\n')
     qqreadtimeurl = os.environ["QQREADTIMEURL"].split('\n')
     qqreadLists = []
-    if len(qqreadheaders) == len(qqreadtimeheaders) and len(qqreadtimeheaders) == len(qqreadtimeurl):
+    if len(qqreadheaders) == len(qqreadbodys) and len(qqreadbodys) == len(qqreadtimeurl):
         qqreadLists = list(
-            zip(qqreadheaders, qqreadtimeheaders, qqreadtimeurl))
-        return qqreadLists
+            zip(qqreadheaders, qqreadbodys, qqreadtimeurl))
     else:
         print("各项Secrets数量不符，请修改！")
-        return
     
 
 
@@ -59,7 +58,7 @@ def github_secrets():
 
 
 def valid(qqheaders):
-    headers = eval(qqheaders[0])
+    headers = ast.literal_eval(qqheaders[0])
     response = requests.get(
         'https://mqqapi.reader.qq.com/mqq/user/init', headers=headers)
     if response.json()["data"]['isLogin'] == False:
@@ -72,13 +71,8 @@ def valid(qqheaders):
 
 
 def get_cookies():
-    if "QQREADHEADERS" and "QQREADTIMEHEADERS" and "QQREADTIMEURL" in os.environ:
-        qqreadLists = github_secrets()
     return [i for i in qqreadLists if valid(i)]
 
-
-print("***"*20)
-print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
 if __name__ == "__main__":
     print(">>>检查有效性")

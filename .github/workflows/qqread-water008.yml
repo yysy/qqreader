@@ -26,9 +26,11 @@ jobs:
         run: python3 qqread.py 
         env:
             QQREADHEADERS: ${{ secrets.QQREADHEADERS }}
-            QQREADTIMEHEADERS: ${{ secrets.QQREADTIMEHEADERS }}
+            QQREADBODYS: ${{ secrets.QQREADBODYS }}
             QQREADTIMEURL: ${{ secrets.QQREADTIMEURL }}
             NOTIFYTYPE: ${{ secrets.NOTIFYTYPE }}
             NOTIFYCFG: ${{ secrets.NOTIFYCFG }}
             SCKEY: ${{ secrets.SCKEY }}
             BARK: ${{ secrets.BARK }}
+            TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+            TG_USER_ID: ${{ secrets.TG_USER_ID }}

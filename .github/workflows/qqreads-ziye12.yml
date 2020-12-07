@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 企鹅读书-ziye12
+name: 企鹅读书
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/11 * * * *'
+     - cron: '*/11 1-23 * * *'
   watch:
     types: started
 
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        QQREAD_HEADER: ${{ secrets.QQREAD_HEADER }}
+        QQREAD_BODY: ${{ secrets.QQREAD_BODY }}
         QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
         QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}
         
@@ -28,12 +28,12 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.QQREAD_HEADER
+        if: env.QQREAD_TIMEHD
         run: |
           cd ~/qqreader
           npm install
       - name: '运行 【企鹅读书】'
-        if: env.QQREAD_HEADER
+        if: env.QQREAD_TIMEHD
         run: |
           cd ~/qqreader
           node qqreads.js

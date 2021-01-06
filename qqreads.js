@@ -490,10 +490,10 @@ function qqreadinfo() {
         $.msg(
           `【${O}】`,
           "COOKE失效：❌❌❌请点击前往获取cookie\n",
-          "https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a",
+          "https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af",
           {
             "open-url":
-              "https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a",
+              "https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af",
           }
         );
       if (info.data.user.nickName) {

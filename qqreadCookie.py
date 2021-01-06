@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2020-12-10
+# @Author  : water008@github
+# @File    : qqreadCookie.py
+
 import requests
 import json
 import time

@@ -8,7 +8,7 @@ Github地址    https://github.com/Water008/qqread
 TG 频道       https://t.me/water_scripts
 TG 群组       https://t.me/joinchat/AAAAAEhFTR9JV3Vf6NAWZw
 ⚠️必须参数获取方法：
-进入 https://m.q.qq.com/a/s/6fb00f7035f82425df91a5b668f6be8b
+进入 https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af
 进一本书阅读一会儿，然后退出，获取QQREADHEADERS QQREADBODYS 和 QQREADTIMEURL
 QQREADHEADERS 和 QQREADTIMEURL 匹配链接为 https://mqqapi.reader.qq.com/mqq/addReadTimeWithBid?.......
 QQREADBODYS 匹配链接为 https://mqqapi.reader.qq.com/log/v4/mqq/track

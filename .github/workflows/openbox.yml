@@ -36,7 +36,7 @@ jobs:
         if: env.QQREAD_TIMEHD
         run: |
           cd ~/qqreader
-          node qqreads-lxk0301.js
+          node openbox.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

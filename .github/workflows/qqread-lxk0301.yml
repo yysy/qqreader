@@ -33,7 +33,7 @@ jobs:
           cd ~/qqreader
           npm install
       - name: '运行 【企鹅读书】'
-        if: env.QQREAD_TIMEHD
+        if: env.QQ_READ_TIME_HEADER_VAL
         run: |
           cd ~/qqreader
           node qqreads-lxk0301.js

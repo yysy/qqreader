@@ -6,7 +6,7 @@ lxk0301修改自用，单独开宝箱
 1.5 调整宝箱策略，20分钟运行一次就行
 */
 const $ = Env(`企鹅读书开宝箱`)
-const notify = $.isNode() ? require("../sendNotify") : "";
+const notify = $.isNode() ? require("./sendNotify") : "";
 const logs = 1;   //0为关闭日志，1为开启
 
 let task, tz = '', kz, config = '', CASH = '', COOKIES_SPLIT = '' ;

@@ -20,6 +20,7 @@ body 包含
 $request.body.indexOf("bookDetail_bottomBar_read_C") >= 0 &&
 $request.body.indexOf("bookLib2_bookList_bookClick_C") >= 0 &&
 $request.body.indexOf("bookRead_show_I") >= 0 &&
+
 不包含
 $request.body.indexOf("topBar_left_back_C") < 0 &&
 $request.body.indexOf("bookRead_dropOut_shelfYes_C") < 0

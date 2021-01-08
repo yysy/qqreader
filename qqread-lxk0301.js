@@ -37,7 +37,7 @@ const $ = Env(jsname)
 let task = '', config, ssr2 = '', wktime, day = 0;
 console.log(`\n========= 脚本执行时间(TM)：${new Date(new Date().getTime() + 0 * 60 * 60 * 1000).toLocaleString('zh', {hour12: false})} =========\n`)
 
-const notify = $.isNode() ? require('../sendNotify') : '';
+const notify = $.isNode() ? require('./sendNotify') : '';
 
 const logs = 1;   //0为关闭日志，1为开启
 

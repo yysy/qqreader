@@ -184,8 +184,8 @@ if ((isGetCookie = typeof $request !== "undefined")) {
 
 function GetCookie() {
   if (
-      $request && $request.url.indexOf("addReadTimeWithBid?") >= 0 /*&& 
-      $request.url.indexOf("Fnav-library") >= 0*/
+      $request && $request.url.indexOf("addReadTimeWithBid?") >= 0 && 
+      $request.url.indexOf("book-category") >= 0
     ) {
     const qqreadtimeurlVal = $request.url;
     if (qqreadtimeurlVal) $.setdata(qqreadtimeurlVal, `qqreadtimeurl${$.idx}`);
@@ -206,7 +206,7 @@ function GetCookie() {
     $.msg(jsname + $.idx, `获取时长header: 成功🎉`, ``);
   } else if (
     $request &&
-    //$request.body.indexOf("bookRead_click_C") >= 0 &&
+    $request.body.indexOf("bookDetail_bottomBar_read_C") >= 0 &&
     $request.body.indexOf("bookLib2_bookList_bookClick_C") >= 0 &&
     $request.body.indexOf("bookRead_show_I") >= 0 &&
     $request.body.indexOf("topBar_left_back_C") < 0 &&
@@ -243,8 +243,8 @@ function all() {
     $.msg(
       jsname,
       "⚠️提示：您还未获取cookie,请点击前往获取cookie\n",
-      "https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af",
-      { "open-url": "https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af" }
+      "https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a",
+      { "open-url": "https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a" }
     );
     $.done();
   }
@@ -521,10 +521,10 @@ function qqreadinfo() {
         $.msg(
           `【${O}】`,
           "COOKE失效：❌❌❌请点击前往获取cookie\n",
-          "https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af",
+          "https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a",
           {
             "open-url":
-              "https://m.q.qq.com/a/s/623327eab13a1c84018e9e9b002ef0af",
+              "https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a",
           }
         );
       if (info.data.user.nickName) {

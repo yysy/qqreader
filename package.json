@@ -1,26 +1,29 @@
 {
-  "name": "Sunert",
+  "name": "aiqiyi-action",
   "version": "1.0.0",
-  "description": "https://github.com/ziye12/JavaScript        https://github.com/Water008/qqread",
-  "main": "jingxi.js",
+  "description": "",
+  "main": "Manga.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sunert/Scripts.git"
+    "url": "git+https://github.com/yysy/aiqiyi-action.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sunert/Scripts/issues"
+    "url": "https://github.com/yysy/aiqiyi-action/issues"
   },
-  "homepage": "https://github.com/Sunert/Scripts#readme",
+  "homepage": "https://github.com/yysy/aiqiyi-action#readme",
   "dependencies": {
+    "download": "^8.0.0",
+    "request": "^2.88.2",
+    "axios": "^0.19.2",
     "crypto-js": "^4.0.0",
+    "request-promise": "^4.2.5",
     "got": "^11.7.0",
-    "http-server": "^0.12.3",
     "tough-cookie": "^4.0.0"
   }
 }

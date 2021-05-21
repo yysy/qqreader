@@ -1,5 +1,5 @@
 {
-  "name": "aiqiyi-action",
+  "name": "qqreader",
   "version": "1.0.0",
   "description": "",
   "main": "Manga.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yysy/aiqiyi-action.git"
+    "url": "git+https://github.com/yysy/qqreader.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yysy/aiqiyi-action/issues"
+    "url": "https://github.com/yysy/qqreader/issues"
   },
-  "homepage": "https://github.com/yysy/aiqiyi-action#readme",
+  "homepage": "https://github.com/yysy/qqreader#readme",
   "dependencies": {
     "download": "^8.0.0",
     "request": "^2.88.2",
